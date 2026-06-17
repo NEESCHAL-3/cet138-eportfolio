@@ -19,6 +19,22 @@ An interactive ePortfolio web application showcasing core concepts of web develo
 ## 🌟 About the Project
 This portfolio serves as an educational and interactive guide to understanding the layers of full-stack web development. Instead of static text, it combines structural documentation with live code demos, interactive components, and responsive grid layouts, highlighting how front-end and back-end layers communicate.
 
+### ❓ Core Q&A
+
+#### 1. What is this website about?
+This website is a Full Stack Development ePortfolio designed for the **CET138 Full Stack Development (Assignment 1)** course. It provides a structured, interactive walk-through of the foundational technologies behind web applications: Semantic HTML, Responsive CSS, Bootstrap Framework, and dynamic JavaScript (ES6+).
+
+#### 2. What will it do?
+It displays theoretical explanations side-by-side with working frontend and backend code simulators. It provides live demonstrations of layout grids, responsive media queries, CSS variables, framework components, local state management (via a task tracker), and asynchronous network communication.
+
+#### 3. What can be done on it?
+Visitors can:
+*   **Modify themes dynamically**: Adjust the background color of CSS cards using the color picker to see custom CSS properties in action.
+*   **Manage checklist tasks**: Add, complete, and delete tasks in a local checklist powered by DOM manipulation.
+*   **Simulate API fetch requests**: Fetch mock JSON data asynchronously to see how databases, servers, and clients communicate.
+*   **Trigger framework components**: Interact with a responsive grid and launch an interactive Bootstrap modal.
+*   **Navigate responsively**: Test the site across different breakpoints (desktop, tablet, mobile) to see responsive layout adjustments.
+
 ---
 
 ## 📚 Topics Covered

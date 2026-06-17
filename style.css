@@ -96,6 +96,7 @@ code {
 .site-mark,
 .intro,
 .intro-copy,
+.intro-qa,
 .topic,
 .topic-copy,
 .evidence-box,
@@ -301,10 +302,44 @@ body.is-scrolled .site-header {
 
 .intro-copy {
   position: relative;
-  grid-column: 1 / -1;
+  grid-column: span 7;
   min-height: 17rem;
   padding: 2rem;
   border-radius: var(--radius-lg);
+}
+
+.intro-qa {
+  position: relative;
+  grid-column: span 5;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.intro-qa h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.qa-item strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-weight: 750;
+  margin-bottom: 0.25rem;
+}
+
+.qa-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
 }
 
 .intro-copy::after {
@@ -964,6 +999,7 @@ body.is-scrolled .site-header {
   }
 
   .intro-copy,
+  .intro-qa,
   .topic-copy,
   .evidence-box {
     grid-column: 1 / -1;
