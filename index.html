@@ -1,0 +1,494 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CET138 Full Stack Development Portfolio</title>
+  <meta name="description" content="An ePortfolio explaining full stack development, HTML, CSS, Bootstrap, and JavaScript.">
+
+  <!-- Modern font and Bootstrap framework. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap is used for the Bootstrap section and some simple responsive layout helpers. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Page header. The links jump to each required assignment topic. -->
+  <header class="site-header">
+    <div class="top-bar">
+      <p class="site-title">
+        <span class="site-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M12 15.5 24 9l12 6.5-12 6.5-12-6.5Z"></path>
+            <path d="M12 24 24 30.5 36 24"></path>
+            <path d="M12 32 24 38.5 36 32"></path>
+            <path d="m18 23-4 4 4 4"></path>
+            <path d="m30 23 4 4-4 4"></path>
+          </svg>
+        </span>
+        <span>Full Stack Development Portfolio</span>
+      </p>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#full-stack">Full Stack</a>
+        <a href="#html-section">HTML</a>
+        <a href="#css-section">CSS</a>
+        <a href="#bootstrap-section">Bootstrap</a>
+        <a href="#javascript-section">JavaScript</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page" id="main-content">
+    <!-- Introduction links the page directly to the assignment requirements. -->
+    <section class="intro bento-grid" aria-labelledby="portfolio-title">
+      <div class="intro-copy bento-panel">
+        <h1 id="portfolio-title">CET138 Full Stack Development Portfolio</h1>
+        <p>
+          This ePortfolio explains the five topics required for CET138 Assignment 1.
+          I have included short explanations, small working examples, and reflections
+          to show how the technologies connect when building web applications.
+        </p>
+        <p>
+          The examples are intentionally small so that each part of the code is easy
+          to read and explain. The JavaScript and CSS examples are interactive, and
+          the Bootstrap section uses real Bootstrap components.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Section 1: full stack development. -->
+    <section class="topic" id="full-stack" aria-labelledby="full-stack-title">
+      <h2 id="full-stack-title">1. What Is Full Stack Development?</h2>
+
+      <div class="two-column">
+        <div class="topic-copy">
+          <h3>Explanation</h3>
+          <p>
+            Full stack development means working with both the front end and the
+            back end of a web application. The front end is what the user sees in
+            the browser. The back end runs on a server, processes requests, applies
+            rules, and connects to a database.
+          </p>
+          <p>
+            A full stack developer does not only make pages look good. They also
+            need to understand how data moves through the application, how users
+            interact with forms, how the server checks information, and how stored
+            data is returned to the user safely.
+          </p>
+          <p>
+            For example, a login form on the front end can send an HTTP request to
+            a Node.js and Express server. The server may check the login details
+            against a MySQL or MongoDB database, then return JSON through an API so
+            the browser knows whether the user has logged in successfully.
+          </p>
+          <p>
+            A simple API response might send back a small JSON object such as
+            <code>{ "loggedIn": true }</code>. This shows how the browser, server,
+            application logic, and database work together in one full stack flow.
+          </p>
+          <p class="reflection">
+            Reflection: this topic is important because the front end and back end
+            must work together. If one layer is weak, the whole application can
+            become slow, confusing, or insecure.
+          </p>
+          <div class="student-note">
+            <strong>My learning note</strong>
+            I understand full stack development better when I think of it as a
+            request travelling through different layers, not as separate unrelated
+            topics.
+          </div>
+        </div>
+
+        <aside class="evidence-box">
+          <h3>Simple request flow</h3>
+          <div class="stack-flow" aria-label="Full stack request flow">
+            <div class="stack-step">
+              <strong>1. Browser</strong>
+              User fills in a form or clicks a button.
+            </div>
+            <div class="stack-step">
+              <strong>2. Front end</strong>
+              HTML, CSS, and JavaScript display the page and collect input.
+            </div>
+            <div class="stack-step">
+              <strong>3. Back end</strong>
+              Server code validates the request and runs the application logic.
+            </div>
+            <div class="stack-step">
+              <strong>4. Database</strong>
+              Data is stored, updated, deleted, or returned to the server.
+            </div>
+          </div>
+          <div class="api-card">
+            <strong>Example API response</strong>
+            <code>{ "loggedIn": true, "message": "Login accepted" }</code>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 2: HTML. -->
+    <section class="topic" id="html-section" aria-labelledby="html-title">
+      <h2 id="html-title">2. HTML</h2>
+
+      <div class="two-column">
+        <div class="topic-copy">
+          <h3>Explanation</h3>
+          <p>
+            HTML stands for HyperText Markup Language. It gives structure and
+            meaning to web content. Headings, paragraphs, links, images, forms,
+            lists, tables, and sections are all described using HTML elements.
+          </p>
+          <p>
+            I have used semantic HTML in this page. Semantic elements such as
+            <code>header</code>, <code>main</code>, <code>section</code>,
+            <code>article</code>, and <code>footer</code> make the page easier for browsers,
+            screen readers, and developers to understand.
+          </p>
+          <ul class="short-list">
+            <li>Headings create a clear page outline.</li>
+            <li>Alternative text explains images or visual placeholders.</li>
+            <li>Labels and form controls improve accessibility.</li>
+          </ul>
+          <div class="student-note">
+            <strong>My learning note</strong>
+            I used semantic tags in this example because they make the structure
+            clearer than using only generic <code>div</code> elements.
+          </div>
+
+          <!-- Code sample: semantic HTML structure. -->
+          <label class="sample-label" for="html-code-sample">Code example</label>
+          <textarea class="code-sample" id="html-code-sample" rows="8" readonly spellcheck="false"><article>
+  <header>
+    <h3>Project card</h3>
+  </header>
+
+  <p>This content belongs together as one article.</p>
+
+  <footer>HTML gives the content meaning.</footer>
+</article></textarea>
+        </div>
+
+        <aside class="evidence-box html-example">
+          <h3>Working HTML example</h3>
+          <article>
+            <header>
+              <h4>Project card</h4>
+            </header>
+            <figure>
+              <div class="image-placeholder" role="img" aria-label="Simple dashboard illustration">
+                Dashboard preview
+              </div>
+              <figcaption>
+                A figure groups visual content with a caption.
+              </figcaption>
+            </figure>
+            <p>
+              This example uses an article, header, figure, figcaption, and footer.
+            </p>
+            <footer>
+              HTML gives the content structure and meaning.
+            </footer>
+          </article>
+
+          <table>
+            <caption>Example project tasks</caption>
+            <tr>
+              <th scope="col">Task</th>
+              <th scope="col">Status</th>
+            </tr>
+            <tr>
+              <td>Create page structure</td>
+              <td>Complete</td>
+            </tr>
+            <tr>
+              <td>Add accessible form</td>
+              <td>In progress</td>
+            </tr>
+          </table>
+
+          <form class="html-demo-form" id="html-demo-form" action="#html-section" method="get" aria-label="Example contact form">
+            <label for="html-name">Name</label>
+            <input id="html-name" name="name" type="text">
+            <button class="plain-button" type="submit">Submit</button>
+          </form>
+          <p class="status-text" id="html-form-status">This form demonstrates a label, text input, and submit button.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 3: CSS. -->
+    <section class="topic" id="css-section" aria-labelledby="css-title">
+      <h2 id="css-title">3. CSS</h2>
+
+      <div class="two-column">
+        <div class="topic-copy">
+          <h3>Explanation</h3>
+          <p>
+            CSS stands for Cascading Style Sheets. It controls how HTML looks on
+            the screen, including colours, spacing, borders, typography, layout,
+            and hover effects. CSS also helps pages adapt to mobile, tablet, and
+            desktop screens.
+          </p>
+          <p>
+            The example uses CSS Grid for layout, a CSS custom property for colour,
+            and a media query so the cards stack on smaller screens. The colour
+            picker changes a CSS variable with JavaScript, which shows that CSS
+            and JavaScript can work together.
+          </p>
+          <ul class="short-list">
+            <li><strong>Grid:</strong> places the cards into columns.</li>
+            <li><strong>Hover:</strong> gives feedback when the user points at a card.</li>
+            <li><strong>Media query:</strong> changes the layout on small screens.</li>
+          </ul>
+          <div class="student-note">
+            <strong>My learning note</strong>
+            I kept the CSS example small so it is clear which rules control layout,
+            colour, and interaction.
+          </div>
+
+          <!-- Code sample: CSS grid and responsive layout. -->
+          <label class="sample-label" for="css-code-sample">Code example</label>
+          <textarea class="code-sample" id="css-code-sample" rows="11" readonly spellcheck="false">.css-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+
+@media (max-width: 850px) {
+  .css-card-grid {
+    grid-template-columns: 1fr;
+  }
+}</textarea>
+        </div>
+
+        <aside class="evidence-box">
+          <h3>Working CSS example</h3>
+          <div class="css-control">
+            <label for="colour-picker">Change first card colour:</label>
+            <input id="colour-picker" type="color" value="#1d5f73">
+          </div>
+          <div class="css-card-grid" id="css-demo">
+            <div class="css-card">
+              <strong>CSS variable</strong>
+              <p>The colour of this card can change.</p>
+            </div>
+            <div class="css-card">
+              <strong>Grid layout</strong>
+              <p>The cards are arranged using CSS Grid.</p>
+            </div>
+            <div class="css-card">
+              <strong>Hover effect</strong>
+              <p>Hover over a card to see it move slightly.</p>
+            </div>
+          </div>
+          <p class="status-text" id="colour-status">The first card uses the default colour.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 4: Bootstrap. -->
+    <section class="topic" id="bootstrap-section" aria-labelledby="bootstrap-title">
+      <h2 id="bootstrap-title">4. Bootstrap Framework</h2>
+
+      <div class="two-column">
+        <div class="topic-copy">
+          <h3>Explanation</h3>
+          <p>
+            Bootstrap is a front-end framework. It gives developers ready-made
+            classes for layout, spacing, forms, buttons, cards, alerts, navigation,
+            and other common interface parts. This can make development faster and
+            helps keep the design consistent.
+          </p>
+          <p>
+            In this example I used Bootstrap's grid, card, badge, alert, button,
+            and modal components. The modal opens using Bootstrap's JavaScript
+            bundle, which shows that Bootstrap includes both CSS and interactive
+            components.
+          </p>
+          <ul class="short-list">
+            <li><code>.container</code> keeps content aligned.</li>
+            <li><code>.row</code> and <code>.col-md-6</code> create a responsive grid.</li>
+            <li><code>.card</code>, <code>.badge</code>, and <code>.alert</code> provide reusable components.</li>
+          </ul>
+          <div class="student-note">
+            <strong>My learning note</strong>
+            Bootstrap helped me see how a framework can speed up common layout and
+            component work while still using normal HTML.
+          </div>
+
+          <!-- Code sample: Bootstrap grid and card classes. -->
+          <label class="sample-label" for="bootstrap-code-sample">Code example</label>
+          <textarea class="code-sample" id="bootstrap-code-sample" rows="9" readonly spellcheck="false"><div class="row g-3">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        Bootstrap card
+      </div>
+    </div>
+  </div>
+</div></textarea>
+        </div>
+
+        <aside class="evidence-box">
+          <h3>Working Bootstrap example</h3>
+          <div class="alert alert-info py-2" role="alert">
+            This alert is styled using Bootstrap.
+          </div>
+
+          <div class="container px-0">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <span class="badge text-bg-success mb-2">Grid</span>
+                    <h4 class="h5">Responsive column</h4>
+                    <p class="mb-0">This card stacks on small screens and uses columns on wider screens.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <span class="badge text-bg-warning mb-2">Modal</span>
+                    <h4 class="h5">Interactive component</h4>
+                    <p>Click the button to open a Bootstrap modal.</p>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#example-modal">
+                      Open modal
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Section 5: JavaScript. -->
+    <section class="topic" id="javascript-section" aria-labelledby="javascript-title">
+      <h2 id="javascript-title">5. JavaScript</h2>
+
+      <div class="two-column">
+        <div class="topic-copy">
+          <h3>Explanation</h3>
+          <p>
+            JavaScript is used to add behaviour to a web page. It can respond to
+            clicks, validate form input, change HTML content, update CSS values,
+            and communicate with APIs. This makes a page dynamic instead of only
+            static.
+          </p>
+          <p>
+            JavaScript can also use <code>fetch()</code> to send and receive data
+            from APIs without reloading the whole page. For example, a page can ask
+            a server for JSON data and update only the part of the page that needs
+            to change.
+          </p>
+          <p>
+            The example is a small checklist. When the form is submitted, JavaScript
+            stops the page from reloading, checks the input, creates a task object,
+            stores it in an array, and updates the page. The complete and delete
+            buttons change the same array and render the list again.
+          </p>
+          <ul class="short-list">
+            <li><strong>Event listener:</strong> reacts when the form is submitted.</li>
+            <li><strong>Array:</strong> stores the current tasks.</li>
+            <li><strong>DOM update:</strong> creates list items and buttons.</li>
+            <li><strong>Validation:</strong> prevents empty tasks being added.</li>
+          </ul>
+          <div class="student-note">
+            <strong>My learning note</strong>
+            This example helped me understand that JavaScript changes the page by
+            changing data first, then updating the DOM to match that data.
+          </div>
+
+          <!-- Code sample: JavaScript task object and render call. -->
+          <label class="sample-label" for="javascript-code-sample">Code example</label>
+          <textarea class="code-sample" id="javascript-code-sample" rows="8" readonly spellcheck="false">tasks.push({
+  id: Date.now(),
+  text: taskInput.value.trim(),
+  done: false
+});
+
+renderTasks();</textarea>
+
+          <label class="sample-label" for="fetch-code-sample">API example</label>
+          <textarea class="code-sample" id="fetch-code-sample" rows="8" readonly spellcheck="false">fetch("/api/tasks")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    updatePage(data);
+  });</textarea>
+        </div>
+
+        <aside class="evidence-box">
+          <h3>Working JavaScript example</h3>
+          <form class="task-form" id="task-form">
+            <input id="task-input" type="text" placeholder="Add a portfolio task" aria-label="Portfolio task">
+            <button class="plain-button" type="submit">Add</button>
+          </form>
+
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <p class="status-text" id="task-status">Add a task to test the JavaScript.</p>
+
+          <div class="api-demo">
+            <strong>API request demo</strong>
+            <p>
+              This button uses <code>fetch()</code> to read JSON and update this
+              message without reloading the page.
+            </p>
+            <button class="plain-button" type="button" id="api-demo-button">Load API data</button>
+            <p class="status-text" id="api-demo-output">Waiting for the API demo.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap modal used in the Bootstrap section. -->
+  <div class="modal fade" id="example-modal" tabindex="-1" aria-labelledby="example-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="example-modal-title">Bootstrap modal example</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This is a Bootstrap modal. It is an example of a ready-made component
+          that can be added with Bootstrap classes and data attributes.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <span class="footer-label">CET138 Assignment 1</span>
+        <strong class="footer-name">Nischal Khadka</strong>
+      </div>
+      <div class="footer-id">
+        <span>Canvas ID</span>
+        <strong>bj19gh</strong>
+      </div>
+      <a class="back-to-top" href="#main-content">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript is required for the modal component. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
